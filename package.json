@@ -3,15 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4"
+  },
+  "watch": {
+    "lint": "src/Calculator/**/*.js"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "node_modules/.bin/eslint --ext .js src/Calculator",
+    "hotlint": "npm-watch lint"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +29,16 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.24.1",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "npm-watch": "^0.4.0",
+    "react-test-renderer": "^16.5.2",
+    "watch": "^1.0.2"
+  }
 }

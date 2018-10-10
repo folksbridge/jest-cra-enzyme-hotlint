@@ -1,0 +1,23 @@
+https://codeburst.io/a-skeptics-guide-to-frontend-testing-part-1-5de4806ad300
+
+yarn add --dev eslint eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-config-airbnb eslint-plugin-jest
+
+node_modules/.bin/eslint --ext .js src/Calculator
+yarn add npm-watch and update package.json
+    "watch": {
+        "lint": "src/Calculator/**/*.js"
+    },
+    "scripts": {
+        "lint": "eslint --ext .js src/Calculator",
+        "hotlint": "npm-watch lint"
+    }
+
+yarn add --dev enzyme enzyme-adapter-react-16
+yarn add react-test-renderer -D
+setupTests.js
+    import { configure } from 'enzyme';
+    import Adapter from 'enzyme-adapter-react-16';
+    configure({ adapter: new Adapter() });
+move to dependencies from devdependencies:
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
